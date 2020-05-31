@@ -129,7 +129,6 @@ const CheckForGameOver = (currentPlayer) =>
             console.log(winString);
 
             gameState.gameOver = true;
-            return;
         }
     });
 }   
