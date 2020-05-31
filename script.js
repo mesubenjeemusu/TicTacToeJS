@@ -110,6 +110,15 @@ const ClaimCell = (space, index) =>
 
 const CheckForGameOver = (currentPlayer) =>
 {
+    // Check for Cat's Game first... then check for winner (this was a bug!)
+    if (gameState.gameSpaceMatrix == (gameState.gameSpaceMatrix | flagCatsGame))
+    {
+        gameState.gameOver = true;
+        let catsGameString = "CAT'S GAME!"
+        status.textContent = catsGameString;
+        console.log(catsGameString);
+    }
+
     // Check for Win
     WinMatrix.forEach((winFlag) =>
     {
@@ -120,17 +129,9 @@ const CheckForGameOver = (currentPlayer) =>
             console.log(winString);
 
             gameState.gameOver = true;
+            return;
         }
     });
-
-    // Check for Cat's Game
-    if (gameState.gameSpaceMatrix == (gameState.gameSpaceMatrix | flagCatsGame))
-    {
-        gameState.gameOver = true;
-        let catsGameString = "CAT'S GAME!"
-        status.textContent = catsGameString;
-        console.log(catsGameString);
-    }
 }   
 
 const ResetGame = () =>
