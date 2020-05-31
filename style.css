@@ -1,0 +1,92 @@
+body
+{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-family: Anton;
+    text-shadow: 4px 4px 5px #888888;
+    margin: 0px;
+}
+
+h1
+{
+    font-size: 3em;
+}
+
+h2
+{
+    font-size: 2em;
+}
+
+hr
+{
+    width: 100%;
+    height: 10px;
+    margin: 0px auto;
+    background-color: black;
+    box-shadow: 4px 4px 5px #888888;
+    border: 0;
+}
+
+button
+{
+    font-family: Anton;
+    font-size: 2em;
+    outline: none;
+    transition: all 0.5s;
+    box-shadow: 4px 4px 5px #888888;
+}
+
+button:hover
+{
+    transform: scale(1.025);
+}
+
+#title
+{
+    font-size: 7em;
+    margin: 0;
+}
+
+#status_text
+{
+    
+}
+
+.container
+{
+    height: 500;
+    width: 500;
+    background-color: lightblue;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    /* order: 2px solid red; */
+    border-radius: 25px;
+    padding: 10px;
+    box-shadow: 4px 4px 5px #888888;
+}
+
+.cell
+{
+    background-color: whitesmoke;
+    border-radius: 15px;
+    font-family: Varela;
+    font-size: 7rem;
+    transition: 0.25s;
+    box-shadow: 4px 4px 5px #888888;
+}
+
+.cell:hover
+{
+    background-color: azure;
+    transform: scale(1.05);
+}
+
+#new_game_btn
+{
+    margin: 20px 10px;
+    border-radius: 20px;
+}
